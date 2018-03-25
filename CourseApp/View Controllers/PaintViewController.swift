@@ -16,12 +16,16 @@ class PaintViewController: UIViewController {
     
     var lastPoint: CGPoint = CGPoint(x: 0, y: 0)
     
-    var red: CGFloat = 0.0
-    var blue : CGFloat = 0.0
-    var green: CGFloat = 0.0
+    var opacity: CGFloat = 1.0
+    var brushSize: CGFloat = 5.0
+    var lineCap: CGLineCap = CGLineCap.round
+    var lineCapColor: UIColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0)
+    var backgroundColor: UIColor = UIColor(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        canvas.backgroundColor = backgroundColor
 
         // Do any additional setup after loading the view.
     }
@@ -91,12 +95,12 @@ class PaintViewController: UIViewController {
         drawingContext?.addLine(to: toPoint)
         
         //Define the form of the drawing
-        drawingContext?.setLineCap(CGLineCap.round)
+        drawingContext?.setLineCap(lineCap)
         
         //Line Width
-        drawingContext?.setLineWidth(5)
+        drawingContext?.setLineWidth(brushSize)
         
-        drawingContext?.setStrokeColor(red: self.red, green: self.green, blue: self.blue, alpha: 1.0)
+        drawingContext?.setStrokeColor(red: lineCapColor.cgColor.components![0], green: lineCapColor.cgColor.components![1], blue: lineCapColor.cgColor.components![2], alpha: opacity)
     
         //Define the style of the line to draw
         drawingContext?.setBlendMode(CGBlendMode.normal)
@@ -118,10 +122,8 @@ class PaintViewController: UIViewController {
     @IBAction func chooseColor(_ sender: UIButton) {
         
         if let colors = sender.backgroundColor?.cgColor.components {
-            
-            red = colors[0]
-            green = colors[1]
-            blue  = colors[2]
+        
+            lineCapColor = UIColor(red: colors[0], green: colors[1], blue: colors[2], alpha: opacity)
         }
         
         
@@ -130,22 +132,84 @@ class PaintViewController: UIViewController {
     @IBAction func resetCanvas(_ sender: UIButton) {
         
         canvas.image = nil
+        lineCapColor = UIColor(red: 0, green: 0, blue: 0, alpha: 1)
+        backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        canvas.backgroundColor = backgroundColor
+        
     }
     
     @IBAction func settings(_ sender: UIButton) {
     }
     
     @IBAction func saveCanvasContent(_ sender: UIButton) {
+        
+        UIGraphicsBeginImageContext(canvas.bounds.size)
+        canvas.image?.draw(in: CGRect(x: 0, y: 0, width: canvas.frame.width, height: canvas.frame.height))
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        
+        let activityView = UIActivityViewController(activityItems: [image], applicationActivities: nil)
+        
+        
+        self.present(activityView, animated: true, completion: nil)
+        
     }
     
-    /*
+    
     // MARK: - Navigation
 
+    
+    // Set the current values of colors for the Settings View
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
+        let settingsViewController = segue.destination as! SettingsViewController
+        
+        //Settings the current values of the PaintViewController to the SettingsViewController before open it
+        settingsViewController.paintViewControllerDelegate = self
+        
+        //Setting the colors
+        settingsViewController.redLineValueColor = lineCapColor.cgColor.components![0]
+        settingsViewController.greenLineValueColor = lineCapColor.cgColor.components![1]
+        settingsViewController.blueLineValueColor = lineCapColor.cgColor.components![2]
+        
+        settingsViewController.redBackgroundValueColor = backgroundColor.cgColor.components![0]
+        settingsViewController.greenBackgroundValueColor = backgroundColor.cgColor.components![1]
+        settingsViewController.blueBackgroundValueColor = backgroundColor.cgColor.components![2]
+
+        //Setting the Line Cap and Brush Size
+        settingsViewController.lineCap = self.lineCap
+        settingsViewController.brushSize = self.brushSize
+        settingsViewController.opacity = self.opacity
+        
+    }
+
+
+}
+
+
+extension PaintViewController : SettingsViewControllerDelegate{
+    
+    //This will set the values of the setting view when the user finish
+    func settingsViewControllerFinished(_ settingsViewController: SettingsViewController) {
+
+        
+        if settingsViewController.isBackgroundColor {
+             backgroundColor = settingsViewController.backgroundColor
+        }else {
+            lineCapColor = settingsViewController.lineCapColor
+        }
+
+        self.opacity = settingsViewController.opacity
+        self.brushSize = settingsViewController.brushSize
+        self.lineCap = settingsViewController.lineCap
+        
+        
+        self.canvas.backgroundColor = settingsViewController.backgroundColor
+        self.lineCapColor = settingsViewController.lineCapColor
+        
+        
+    }
+    
 }

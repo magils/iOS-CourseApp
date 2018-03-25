@@ -12,6 +12,7 @@
 		69677271204D1F34000BF097 /* AgreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69677270204D1F34000BF097 /* AgreedViewController.swift */; };
 		698D6CB8205E90E8002A56DF /* PaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698D6CB7205E90E8002A56DF /* PaintViewController.swift */; };
 		699ACCE22053ACB500B2598B /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699ACCE12053ACB500B2598B /* SegmentedViewController.swift */; };
+		699D7FAF20662EAD0027B0F1 /* ScrollViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D7FAE20662EAD0027B0F1 /* ScrollViewViewController.swift */; };
 		69CECED1205219F30033D18C /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CECED0205219F30033D18C /* TimerViewController.swift */; };
 		69CECED3205268570033D18C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CECED2205268570033D18C /* TodayViewController.swift */; };
 		69EC95E5204D169800F2FAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EC95E4204D169800F2FAB5 /* AppDelegate.swift */; };
@@ -41,11 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		695DB42D205F665F009C0A27 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SettingsViewController.swift; path = "View Controllers/SettingsViewController.swift"; sourceTree = "<group>"; };
+		695DB42D205F665F009C0A27 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6967726E204D18E6000BF097 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		69677270204D1F34000BF097 /* AgreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreedViewController.swift; sourceTree = "<group>"; };
 		698D6CB7205E90E8002A56DF /* PaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintViewController.swift; sourceTree = "<group>"; };
 		699ACCE12053ACB500B2598B /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
+		699D7FAE20662EAD0027B0F1 /* ScrollViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewViewController.swift; sourceTree = "<group>"; };
 		69CECED0205219F30033D18C /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		69CECED2205268570033D18C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		69EC95E1204D169800F2FAB5 /* CourseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,8 @@
 				69CECED2205268570033D18C /* TodayViewController.swift */,
 				699ACCE12053ACB500B2598B /* SegmentedViewController.swift */,
 				698D6CB7205E90E8002A56DF /* PaintViewController.swift */,
+				699D7FAE20662EAD0027B0F1 /* ScrollViewViewController.swift */,
+				695DB42D205F665F009C0A27 /* SettingsViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -128,7 +132,6 @@
 				69EC95E4204D169800F2FAB5 /* AppDelegate.swift */,
 				69EC95E6204D169800F2FAB5 /* ViewController.swift */,
 				69EC95E8204D169800F2FAB5 /* Main.storyboard */,
-				695DB42D205F665F009C0A27 /* SettingsViewController.swift */,
 				69EC95EB204D169800F2FAB5 /* Assets.xcassets */,
 				69EC95ED204D169800F2FAB5 /* LaunchScreen.storyboard */,
 				69EC95F0204D169800F2FAB5 /* Info.plist */,
@@ -296,6 +299,7 @@
 				699ACCE22053ACB500B2598B /* SegmentedViewController.swift in Sources */,
 				69EC95E5204D169800F2FAB5 /* AppDelegate.swift in Sources */,
 				698D6CB8205E90E8002A56DF /* PaintViewController.swift in Sources */,
+				699D7FAF20662EAD0027B0F1 /* ScrollViewViewController.swift in Sources */,
 				695DB42E205F665F009C0A27 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
