@@ -170,13 +170,13 @@ class PaintViewController: UIViewController {
         settingsViewController.paintViewControllerDelegate = self
         
         //Setting the colors
-        settingsViewController.redLineValueColor = lineCapColor.cgColor.components![0]
-        settingsViewController.greenLineValueColor = lineCapColor.cgColor.components![1]
-        settingsViewController.blueLineValueColor = lineCapColor.cgColor.components![2]
+        settingsViewController.redLineValueColor = lineCapColor.cgColor.components![0]   * 255
+        settingsViewController.greenLineValueColor = lineCapColor.cgColor.components![1] * 255
+        settingsViewController.blueLineValueColor = lineCapColor.cgColor.components![2]  * 255
         
-        settingsViewController.redBackgroundValueColor = backgroundColor.cgColor.components![0]
-        settingsViewController.greenBackgroundValueColor = backgroundColor.cgColor.components![1]
-        settingsViewController.blueBackgroundValueColor = backgroundColor.cgColor.components![2]
+        settingsViewController.redBackgroundValueColor = backgroundColor.cgColor.components![0] * 255
+        settingsViewController.greenBackgroundValueColor = backgroundColor.cgColor.components![1] * 255
+        settingsViewController.blueBackgroundValueColor = backgroundColor.cgColor.components![2] * 255
 
         //Setting the Line Cap and Brush Size
         settingsViewController.lineCap = self.lineCap

@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -142,6 +141,26 @@
                                             <segue destination="K1I-zc-YCT" kind="show" id="cw4-B2-ITk"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" textLabel="01s-zF-aa3" style="IBUITableViewCellStyleDefault" id="TaI-DC-ReW">
+                                        <rect key="frame" x="0.0" y="264" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TaI-DC-ReW" id="UBZ-wb-KsS">
+                                            <rect key="frame" x="0.0" y="0.0" width="286" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Sound" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="01s-zF-aa3">
+                                                    <rect key="frame" x="16" y="0.0" width="269" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="KYs-Bz-8vJ" kind="show" id="96J-3H-JDa"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                         </sections>
@@ -243,7 +262,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="00Q-e6-Hi7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.75" y="-915.84507042253517"/>
+            <point key="canvasLocation" x="1376" y="-42"/>
         </scene>
         <!--Segmented View Controller-->
         <scene sceneID="Ybm-lA-a66">
@@ -356,7 +375,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tC9-Za-SJX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="892.5" y="-233.45070422535213"/>
+            <point key="canvasLocation" x="1658" y="744"/>
         </scene>
         <!--AgreedView-->
         <scene sceneID="syc-tT-9dm">
@@ -406,7 +425,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3mj-lD-kAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1588.125" y="-233.45070422535213"/>
+            <point key="canvasLocation" x="2434" y="744"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="JQ9-Xa-hXP">
@@ -431,7 +450,7 @@
                                                     <action selector="setRedValue:" destination="dmh-JX-pfN" eventType="valueChanged" id="vlH-wO-0qt"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="fz1-fx-NOb">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="10" minValue="10" maxValue="60" translatesAutoresizingMaskIntoConstraints="NO" id="fz1-fx-NOb">
                                                 <rect key="frame" x="6" y="230" width="308" height="31"/>
                                                 <connections>
                                                     <action selector="brushSlider:" destination="dmh-JX-pfN" eventType="valueChanged" id="M5c-fo-bO5"/>
@@ -833,10 +852,10 @@
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="751" scrollEnabled="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="N4D-Bb-k0J">
                                                 <rect key="frame" x="8" y="315.5" width="304" height="684.5"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <mutableString key="text">Apple Computers, Inc. was founded on April 1, 1976, by college dropouts Steve Jobs and Steve Wozniak, who brought to the new company a vision of changing the way people viewed computers. Jobs and Wozniak wanted to make computers small enough for people to have them in their homes or offices. Simply put, they wanted a computer that was user-friendly.
+                                                <string key="text">Apple Computers, Inc. was founded on April 1, 1976, by college dropouts Steve Jobs and Steve Wozniak, who brought to the new company a vision of changing the way people viewed computers. Jobs and Wozniak wanted to make computers small enough for people to have them in their homes or offices. Simply put, they wanted a computer that was user-friendly.
 Wozniak left Apple in 1983 due to a diminishing interest in the day-to-day running of Apple Computers. Jobs then hired PepsiCo's John Sculley to be president. However, this move backfired and after much controversy with Sculley, Jobs left in 1985 and went on to new and bigger things. He founded his own company NeXT Software and he also bought Pixar from George Lucas, which would later become a huge success in computer animation of such movies as Toy Story, A Bug's Life, Monsters, Inc., and Finding Nemo.3 Through the rest of the 1980s, Apple was still doing well and in 1990 it posted its highest profits yet. This was, however, mostly due to the plans that Jobs had already set in motion before he left, most notably his deal with a tiny company by the name of Adobe, creator of the Adobe Portable Document Format (PDF). Together the two companies created the phenomenon known as desktop publishing.4
 
-Back in 1985 Sculley turned down an appeal from Microsoft founder Bill Gates to license its software. This decision would later come back to haunt him because Microsoft, whose Windows operating system (OS) featured a graphical interface similar to Apple's, became their toughest competition in the late 1980s and throughout the 1990s.</mutableString>
+Back in 1985 Sculley turned down an appeal from Microsoft founder Bill Gates to license its software. This decision would later come back to haunt him because Microsoft, whose Windows operating system (OS) featured a graphical interface similar to Apple's, became their toughest competition in the late 1980s and throughout the 1990s.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
@@ -940,7 +959,56 @@ Back in 1985 Sculley turned down an appeal from Microsoft founder Bill Gates to 
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zsT-ci-iGj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="888.75" y="534.50704225352115"/>
+            <point key="canvasLocation" x="799" y="744"/>
+        </scene>
+        <!--Sound View Controller-->
+        <scene sceneID="8ba-ve-nEn">
+            <objects>
+                <viewController id="KYs-Bz-8vJ" customClass="SoundViewController" customModule="CourseApp" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ezX-J6-uQ0">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wUg-Pr-p5j">
+                                <rect key="frame" x="9" y="87" width="305" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Play Music"/>
+                                <connections>
+                                    <action selector="playMusic:" destination="KYs-Bz-8vJ" eventType="touchUpInside" id="Weo-bZ-52B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Iz-Lo-8eH">
+                                <rect key="frame" x="9" y="125" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Pause Music"/>
+                                <connections>
+                                    <action selector="pauseMusic:" destination="KYs-Bz-8vJ" eventType="touchUpInside" id="MJk-7L-2tK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BZ1-6x-PRv">
+                                <rect key="frame" x="9" y="163" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Stop Music"/>
+                                <connections>
+                                    <action selector="stopMusic:" destination="KYs-Bz-8vJ" eventType="touchUpInside" id="YtI-8J-0Oe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNy-sy-3Ap">
+                                <rect key="frame" x="9" y="201" width="295" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Restart Music"/>
+                                <connections>
+                                    <action selector="restartMusic:" destination="KYs-Bz-8vJ" eventType="touchUpInside" id="ay1-3I-T3t"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="JuV-BV-C4Q"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xxp-0S-Wrd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-941.25" y="743.66197183098598"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AQT-iH-LLr">
@@ -958,7 +1026,7 @@ Back in 1985 Sculley turned down an appeal from Microsoft founder Bill Gates to 
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQC-hF-Bae" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-615" y="-231"/>
+            <point key="canvasLocation" x="-1294" y="-42"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="9Sx-la-6Dl">

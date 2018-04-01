@@ -13,6 +13,9 @@
 		698D6CB8205E90E8002A56DF /* PaintViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 698D6CB7205E90E8002A56DF /* PaintViewController.swift */; };
 		699ACCE22053ACB500B2598B /* SegmentedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699ACCE12053ACB500B2598B /* SegmentedViewController.swift */; };
 		699D7FAF20662EAD0027B0F1 /* ScrollViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D7FAE20662EAD0027B0F1 /* ScrollViewViewController.swift */; };
+		699D7FB1206782A00027B0F1 /* SoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 699D7FB0206782A00027B0F1 /* SoundViewController.swift */; };
+		699D7FB4206784640027B0F1 /* Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 699D7FB3206784640027B0F1 /* Music.mp3 */; };
+		699D7FB7206784B70027B0F1 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 699D7FB6206784B70027B0F1 /* AVFoundation.framework */; };
 		69CECED1205219F30033D18C /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CECED0205219F30033D18C /* TimerViewController.swift */; };
 		69CECED3205268570033D18C /* TodayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69CECED2205268570033D18C /* TodayViewController.swift */; };
 		69EC95E5204D169800F2FAB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69EC95E4204D169800F2FAB5 /* AppDelegate.swift */; };
@@ -48,6 +51,9 @@
 		698D6CB7205E90E8002A56DF /* PaintViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintViewController.swift; sourceTree = "<group>"; };
 		699ACCE12053ACB500B2598B /* SegmentedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentedViewController.swift; sourceTree = "<group>"; };
 		699D7FAE20662EAD0027B0F1 /* ScrollViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollViewViewController.swift; sourceTree = "<group>"; };
+		699D7FB0206782A00027B0F1 /* SoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundViewController.swift; sourceTree = "<group>"; };
+		699D7FB3206784640027B0F1 /* Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Music.mp3; sourceTree = "<group>"; };
+		699D7FB6206784B70027B0F1 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		69CECED0205219F30033D18C /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		69CECED2205268570033D18C /* TodayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayViewController.swift; sourceTree = "<group>"; };
 		69EC95E1204D169800F2FAB5 /* CourseApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CourseApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -70,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699D7FB7206784B70027B0F1 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,8 +108,25 @@
 				698D6CB7205E90E8002A56DF /* PaintViewController.swift */,
 				699D7FAE20662EAD0027B0F1 /* ScrollViewViewController.swift */,
 				695DB42D205F665F009C0A27 /* SettingsViewController.swift */,
+				699D7FB0206782A00027B0F1 /* SoundViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		699D7FB22067842F0027B0F1 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				699D7FB3206784640027B0F1 /* Music.mp3 */,
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		699D7FB5206784B60027B0F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				699D7FB6206784B70027B0F1 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		69EC95D8204D169800F2FAB5 = {
@@ -112,6 +136,7 @@
 				69EC95F8204D169800F2FAB5 /* CourseAppTests */,
 				69EC9603204D169900F2FAB5 /* CourseAppUITests */,
 				69EC95E2204D169800F2FAB5 /* Products */,
+				699D7FB5206784B60027B0F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +153,7 @@
 		69EC95E3204D169800F2FAB5 /* CourseApp */ = {
 			isa = PBXGroup;
 			children = (
+				699D7FB22067842F0027B0F1 /* Sounds */,
 				6967726D204D18C5000BF097 /* View Controllers */,
 				69EC95E4204D169800F2FAB5 /* AppDelegate.swift */,
 				69EC95E6204D169800F2FAB5 /* ViewController.swift */,
@@ -264,6 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				699D7FB4206784640027B0F1 /* Music.mp3 in Resources */,
 				69EC95EF204D169800F2FAB5 /* LaunchScreen.storyboard in Resources */,
 				69EC95EC204D169800F2FAB5 /* Assets.xcassets in Resources */,
 				69EC95EA204D169800F2FAB5 /* Main.storyboard in Resources */,
@@ -294,6 +321,7 @@
 				69CECED1205219F30033D18C /* TimerViewController.swift in Sources */,
 				69677271204D1F34000BF097 /* AgreedViewController.swift in Sources */,
 				69CECED3205268570033D18C /* TodayViewController.swift in Sources */,
+				699D7FB1206782A00027B0F1 /* SoundViewController.swift in Sources */,
 				69EC95E7204D169800F2FAB5 /* ViewController.swift in Sources */,
 				6967726F204D18E6000BF097 /* AlertsViewController.swift in Sources */,
 				699ACCE22053ACB500B2598B /* SegmentedViewController.swift in Sources */,
@@ -403,7 +431,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -454,7 +482,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";

@@ -70,10 +70,13 @@ class SettingsViewController: UIViewController {
     }
     
 
+    
     @IBAction func brushSlider(_ sender: UISlider) {
         
-        brushSizeLabel.text = "Brush Size: \(String(format:"%.2f",sender.value))"
-        brushSize = CGFloat(sender.value)
+        let roundedValue = sender.value.rounded()
+        
+        brushSizeLabel.text = "Brush Size: \(String(format:"%.2f",roundedValue))"
+        brushSize = CGFloat(roundedValue)
        
         updatePreviewCanvas()
     }
@@ -139,15 +142,12 @@ class SettingsViewController: UIViewController {
         
         context?.setLineCap(lineCap)
         context?.setLineWidth(brushSize)
-        context?.move(to: CGPoint(x: 80, y: 53))
-        context?.addLine(to: CGPoint(x: 80, y: 53))
+        context?.move(to: CGPoint(x: 82, y: 55))
+        context?.addLine(to: CGPoint(x: 82, y: 55))
         
-        if isBackgroundColor  {
-            backgroundColor = UIColor(red: redBackgroundValueColor / 255, green: greenBackgroundValueColor / 255, blue: blueBackgroundValueColor / 255 , alpha: opacity)
-        } else {
-            lineCapColor = UIColor(red: redLineValueColor / 255, green: greenLineValueColor / 255, blue: blueLineValueColor / 255 , alpha: opacity)
-        }
-        
+        backgroundColor = UIColor(red: redBackgroundValueColor / 255, green: greenBackgroundValueColor / 255, blue: blueBackgroundValueColor / 255 , alpha: 1.0)
+        lineCapColor = UIColor(red: redLineValueColor / 255, green: greenLineValueColor / 255, blue: blueLineValueColor / 255 , alpha: opacity)
+    
         context?.setStrokeColor(red: lineCapColor.cgColor.components![0], green: lineCapColor.cgColor.components![1], blue: lineCapColor.cgColor.components![2], alpha: opacity)
         context?.strokePath()
 
@@ -164,14 +164,18 @@ class SettingsViewController: UIViewController {
         
         switch colorFillerSegmentControl.selectedSegmentIndex {
             
+        //CASE For Foreground Color
         case 0:
+            
             opacitySlider.isEnabled = true
             isBackgroundColor = false
             
             //Set the values of the color sliders with the values of the line cap
             updateSlidersWith(red: redLineValueColor, green: greenLineValueColor, blue: blueLineValueColor)
 
+        //CASE For Background Color
         case 1:
+            
             opacitySlider.isEnabled = false
             opacitySlider.setValue(1.0, animated: true)
             opacity = CGFloat(1.0)
@@ -197,11 +201,14 @@ class SettingsViewController: UIViewController {
         
         let roundLineCapAction = UIAlertAction.init(title: "Round", style: .default) { (alertAction) in
             self.lineCap = CGLineCap.round
+            self.updatePreviewCanvas()
+
         }
         
         
         let squareLineCapAction = UIAlertAction.init(title: "Square", style: .default) { (alertAction) in
             self.lineCap = CGLineCap.square
+            self.updatePreviewCanvas()
         }
         
         
@@ -219,9 +226,15 @@ class SettingsViewController: UIViewController {
     
     func updateSlidersWith(red: CGFloat, green: CGFloat, blue: CGFloat){
         
+        /*
         redSlider.setValue(Float(red * 255), animated: true)
         greenSlider.setValue(Float(green * 255), animated: true)
         blueSlider.setValue(Float(blue * 255), animated: true)
+        */
+        
+        redSlider.setValue(Float(red), animated: true)
+        greenSlider.setValue(Float(green), animated: true)
+        blueSlider.setValue(Float(blue), animated: true)
         
         self.redValueLabel.text = String(format: "%d", Int(redSlider.value)) as String
         self.greenValueLabel.text = String(format: "%d",Int(greenSlider.value)) as String
@@ -230,8 +243,6 @@ class SettingsViewController: UIViewController {
         updatePreviewCanvas()
         
     }
-    
-    
     
     
     override func viewWillDisappear(_ animated: Bool) {
