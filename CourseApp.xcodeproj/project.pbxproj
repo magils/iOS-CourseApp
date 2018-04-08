@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		692F7A39207A588400DEB4EF /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F7A38207A588400DEB4EF /* VideoPlayerViewController.swift */; };
+		692F7A3B207A5D3200DEB4EF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692F7A3A207A5D3200DEB4EF /* AVKit.framework */; };
+		692F7A40207A68BE00DEB4EF /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 692F7A3F207A68BE00DEB4EF /* Video.mp4 */; };
 		695DB42E205F665F009C0A27 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DB42D205F665F009C0A27 /* SettingsViewController.swift */; };
 		6967726F204D18E6000BF097 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967726E204D18E6000BF097 /* AlertsViewController.swift */; };
 		69677271204D1F34000BF097 /* AgreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69677270204D1F34000BF097 /* AgreedViewController.swift */; };
@@ -45,6 +48,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		692F7A38207A588400DEB4EF /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
+		692F7A3A207A5D3200DEB4EF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
+		692F7A3F207A68BE00DEB4EF /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
 		695DB42D205F665F009C0A27 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6967726E204D18E6000BF097 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		69677270204D1F34000BF097 /* AgreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreedViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				692F7A3B207A5D3200DEB4EF /* AVKit.framework in Frameworks */,
 				699D7FB7206784B70027B0F1 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -97,6 +104,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		692F7A41207A68FF00DEB4EF /* Videos */ = {
+			isa = PBXGroup;
+			children = (
+				692F7A3F207A68BE00DEB4EF /* Video.mp4 */,
+			);
+			path = Videos;
+			sourceTree = "<group>";
+		};
 		6967726D204D18C5000BF097 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -109,6 +124,7 @@
 				699D7FAE20662EAD0027B0F1 /* ScrollViewViewController.swift */,
 				695DB42D205F665F009C0A27 /* SettingsViewController.swift */,
 				699D7FB0206782A00027B0F1 /* SoundViewController.swift */,
+				692F7A38207A588400DEB4EF /* VideoPlayerViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -124,6 +140,7 @@
 		699D7FB5206784B60027B0F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				692F7A3A207A5D3200DEB4EF /* AVKit.framework */,
 				699D7FB6206784B70027B0F1 /* AVFoundation.framework */,
 			);
 			name = Frameworks;
@@ -153,6 +170,7 @@
 		69EC95E3204D169800F2FAB5 /* CourseApp */ = {
 			isa = PBXGroup;
 			children = (
+				692F7A41207A68FF00DEB4EF /* Videos */,
 				699D7FB22067842F0027B0F1 /* Sounds */,
 				6967726D204D18C5000BF097 /* View Controllers */,
 				69EC95E4204D169800F2FAB5 /* AppDelegate.swift */,
@@ -293,6 +311,7 @@
 				699D7FB4206784640027B0F1 /* Music.mp3 in Resources */,
 				69EC95EF204D169800F2FAB5 /* LaunchScreen.storyboard in Resources */,
 				69EC95EC204D169800F2FAB5 /* Assets.xcassets in Resources */,
+				692F7A40207A68BE00DEB4EF /* Video.mp4 in Resources */,
 				69EC95EA204D169800F2FAB5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -327,6 +346,7 @@
 				699ACCE22053ACB500B2598B /* SegmentedViewController.swift in Sources */,
 				69EC95E5204D169800F2FAB5 /* AppDelegate.swift in Sources */,
 				698D6CB8205E90E8002A56DF /* PaintViewController.swift in Sources */,
+				692F7A39207A588400DEB4EF /* VideoPlayerViewController.swift in Sources */,
 				699D7FAF20662EAD0027B0F1 /* ScrollViewViewController.swift in Sources */,
 				695DB42E205F665F009C0A27 /* SettingsViewController.swift in Sources */,
 			);
