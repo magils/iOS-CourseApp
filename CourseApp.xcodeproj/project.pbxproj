@@ -10,6 +10,9 @@
 		692F7A39207A588400DEB4EF /* VideoPlayerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 692F7A38207A588400DEB4EF /* VideoPlayerViewController.swift */; };
 		692F7A3B207A5D3200DEB4EF /* AVKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 692F7A3A207A5D3200DEB4EF /* AVKit.framework */; };
 		692F7A40207A68BE00DEB4EF /* Video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 692F7A3F207A68BE00DEB4EF /* Video.mp4 */; };
+		693701372083EB5A00ACF435 /* MoreSoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 693701362083EB5A00ACF435 /* MoreSoundViewController.swift */; };
+		693701392083EC5400ACF435 /* sample-sound.aif in Resources */ = {isa = PBXBuildFile; fileRef = 693701382083EC5400ACF435 /* sample-sound.aif */; };
+		6937013B2084316300ACF435 /* scoobydo-papa.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6937013A2084316200ACF435 /* scoobydo-papa.mp3 */; };
 		695DB42E205F665F009C0A27 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 695DB42D205F665F009C0A27 /* SettingsViewController.swift */; };
 		6967726F204D18E6000BF097 /* AlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6967726E204D18E6000BF097 /* AlertsViewController.swift */; };
 		69677271204D1F34000BF097 /* AgreedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69677270204D1F34000BF097 /* AgreedViewController.swift */; };
@@ -51,6 +54,9 @@
 		692F7A38207A588400DEB4EF /* VideoPlayerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewController.swift; sourceTree = "<group>"; };
 		692F7A3A207A5D3200DEB4EF /* AVKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVKit.framework; path = System/Library/Frameworks/AVKit.framework; sourceTree = SDKROOT; };
 		692F7A3F207A68BE00DEB4EF /* Video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video.mp4; sourceTree = "<group>"; };
+		693701362083EB5A00ACF435 /* MoreSoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreSoundViewController.swift; sourceTree = "<group>"; };
+		693701382083EC5400ACF435 /* sample-sound.aif */ = {isa = PBXFileReference; lastKnownFileType = file; path = "sample-sound.aif"; sourceTree = "<group>"; };
+		6937013A2084316200ACF435 /* scoobydo-papa.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "scoobydo-papa.mp3"; sourceTree = "<group>"; };
 		695DB42D205F665F009C0A27 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		6967726E204D18E6000BF097 /* AlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewController.swift; sourceTree = "<group>"; };
 		69677270204D1F34000BF097 /* AgreedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreedViewController.swift; sourceTree = "<group>"; };
@@ -125,6 +131,7 @@
 				695DB42D205F665F009C0A27 /* SettingsViewController.swift */,
 				699D7FB0206782A00027B0F1 /* SoundViewController.swift */,
 				692F7A38207A588400DEB4EF /* VideoPlayerViewController.swift */,
+				693701362083EB5A00ACF435 /* MoreSoundViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -132,6 +139,8 @@
 		699D7FB22067842F0027B0F1 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				6937013A2084316200ACF435 /* scoobydo-papa.mp3 */,
+				693701382083EC5400ACF435 /* sample-sound.aif */,
 				699D7FB3206784640027B0F1 /* Music.mp3 */,
 			);
 			path = Sounds;
@@ -270,6 +279,11 @@
 					69EC95E0204D169800F2FAB5 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 					69EC95F4204D169800F2FAB5 = {
 						CreatedOnToolsVersion = 9.2;
@@ -310,7 +324,9 @@
 			files = (
 				699D7FB4206784640027B0F1 /* Music.mp3 in Resources */,
 				69EC95EF204D169800F2FAB5 /* LaunchScreen.storyboard in Resources */,
+				693701392083EC5400ACF435 /* sample-sound.aif in Resources */,
 				69EC95EC204D169800F2FAB5 /* Assets.xcassets in Resources */,
+				6937013B2084316300ACF435 /* scoobydo-papa.mp3 in Resources */,
 				692F7A40207A68BE00DEB4EF /* Video.mp4 in Resources */,
 				69EC95EA204D169800F2FAB5 /* Main.storyboard in Resources */,
 			);
@@ -341,6 +357,7 @@
 				69677271204D1F34000BF097 /* AgreedViewController.swift in Sources */,
 				69CECED3205268570033D18C /* TodayViewController.swift in Sources */,
 				699D7FB1206782A00027B0F1 /* SoundViewController.swift in Sources */,
+				693701372083EB5A00ACF435 /* MoreSoundViewController.swift in Sources */,
 				69EC95E7204D169800F2FAB5 /* ViewController.swift in Sources */,
 				6967726F204D18E6000BF097 /* AlertsViewController.swift in Sources */,
 				699ACCE22053ACB500B2598B /* SegmentedViewController.swift in Sources */,
